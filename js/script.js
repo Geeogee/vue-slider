@@ -45,13 +45,11 @@ function initVue() {
 
             stopSlideshow: function() {
 
-                console.log("Stop")
                 clearInterval(this.timer);
             },
 
             startSlideshow: function() {
 
-                console.log("Start");
                 this.timer = setInterval(this.next, 3000);
             }
 

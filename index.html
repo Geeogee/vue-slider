@@ -22,14 +22,14 @@
 
         <div id="slideshow">
             
-            <div id="slideshow-slides">
+            <div id="slideshow-slides" @mouseover="stopSlideshow" @mouseleave="startSlideshow">
 
                 <div id="prev" class="action" @click="prev">
                     <i class="fas fa-chevron-left"></i>
                 </div>
     
-                <div id="images" @mouseover="stopSlideshow" @mouseleave="startSlideshow">
-                    <img v-for="(image, index) in images" v-if="index == active" :src="image" >
+                <div id="images">
+                    <img v-for="(image, index) in images" :key="index" v-if="index == active" :src="image">
                 </div>
     
                 <div id="next" class="action" @click="next">
