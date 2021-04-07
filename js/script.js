@@ -8,7 +8,8 @@ function initVue() {
 
             "test" : "Hello world!",
             "images" : ["img/rathalos.webp", "img/rajang.webp", "img/zinogre.webp", "img/fatalis.webp"],    
-            "active": 0
+            "active": 0,
+            "timer" : ""
         },
 
         methods: {
@@ -40,13 +41,25 @@ function initVue() {
             imageJump: function(index) {
 
                 this.active = index;
+            },
+
+            stopSlideshow: function() {
+
+                console.log("Stop")
+                clearInterval(this.timer);
+            },
+
+            startSlideshow: function() {
+
+                console.log("Start");
+                this.timer = setInterval(this.next, 3000);
             }
 
         },
 
         mounted: function() {
 
-           const timer = setInterval(this.next, 3000);
+           this.timer = setInterval(this.next, 3000);
         }
     })
 }
