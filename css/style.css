@@ -1,0 +1,67 @@
+/* GENERAL CSS */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+.container {
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center
+}
+
+
+/* SLIDESHOW */
+
+#slideshow {
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+
+
+#slideshow > #slideshow-slides {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ #slideshow-slides > #images {
+
+    height: 500px;
+    width: 900px;
+    
+    background-color: red;
+
+    display: flex;
+    justify-content: center;
+}
+
+#images > img {
+
+    max-height: 100%;
+
+
+}
+
+#slideshow-slides > .action {
+
+    font-size: 60px;
+
+    margin: 0 20px;
+} 
+
+/* JUMP LINKS CIRCLES */
+
+#jump-circles {
+
+    align-self: center;
+}
