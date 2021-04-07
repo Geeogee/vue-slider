@@ -81,7 +81,7 @@
 
 }
 
-.jump-circle.active {
+#jump-circles > .jump-circle.active {
 
     background-color: red;
 }

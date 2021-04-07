@@ -8,29 +8,37 @@ function initVue() {
 
             "test" : "Hello world!",
             "images" : ["img/rathalos.webp", "img/rajang.webp", "img/zinogre.webp", "img/fatalis.webp"],    
-            "active": 0,
-            "max" : 3,
-            "min": 0
+            "active": 0
         },
 
         methods: {
 
             next: function() {
 
-                if (this.active >= this.max) {
+                
+                const max = this.images.length - 1;
+
+                if (this.active == max) {
                     this.active = 0
                 } else {
                     this.active++
                 }
+
             },
 
             prev: function() {
+                const max = this.images.length - 1;
 
-                if (this.active <= this.min) {
-                    this.active = this.max
+                if (this.active == 0) {
+                    this.active = max
                 } else {
                     this.active--
                 }
+            },
+
+            imageJump: function(index) {
+
+                this.active = index;
             }
         }
     })

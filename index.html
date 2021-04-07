@@ -39,7 +39,7 @@
             </div>
 
             <div id="jump-circles">
-                    <span v-for="(image,index) in images" :id="index" v-if="index == active" class="jump-circle"></span>         
+                    <span v-for="(image,index) in images" :key="index" :class="index == active ? 'jump-circle active' : 'jump-circle'" @click="imageJump(index)"></span>         
             </div>
 
         </div>
