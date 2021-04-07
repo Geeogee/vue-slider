@@ -43,13 +43,18 @@
 
     display: flex;
     justify-content: center;
+
+    color: #000
 }
 
 #images > img {
 
     max-height: 100%;
+}
 
+.active {
 
+    display: active;
 }
 
 #slideshow-slides > .action {

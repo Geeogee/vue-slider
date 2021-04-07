@@ -29,10 +29,7 @@
                 </div>
     
                 <div id="images">
-                    <img src="img/rathalos.webp">
-                    <!-- <img src="img/rajang.webp">
-                    <img src="img/fatalis.webp">
-                    <img src="img/zinogre.webp"> -->
+                    <img v-for="(image, index) in images" v-if="index == active" :src="image" >
                 </div>
     
                 <div id="next" class="action" @click="next">
