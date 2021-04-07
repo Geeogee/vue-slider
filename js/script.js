@@ -40,13 +40,13 @@ function initVue() {
             imageJump: function(index) {
 
                 this.active = index;
-            },
+            }
 
         },
 
-        created: function() {
+        mounted: function() {
 
-            setInterval(this.next, 3000);
+           const timer = setInterval(this.next, 3000);
         }
     })
 }
