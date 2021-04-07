@@ -27,6 +27,7 @@ function initVue() {
             },
 
             prev: function() {
+
                 const max = this.images.length - 1;
 
                 if (this.active == 0) {
@@ -39,7 +40,13 @@ function initVue() {
             imageJump: function(index) {
 
                 this.active = index;
-            }
+            },
+
+        },
+
+        created: function() {
+
+            setInterval(this.next, 3000);
         }
     })
 }
