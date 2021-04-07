@@ -52,11 +52,6 @@
     max-height: 100%;
 }
 
-.active {
-
-    display: active;
-}
-
 #slideshow-slides > .action {
 
     font-size: 60px;
@@ -69,4 +64,24 @@
 #jump-circles {
 
     align-self: center;
+}
+
+
+#jump-circles > .jump-circle {
+
+    display: inline-block;
+
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    
+    margin: 10px 5px 0;
+
+    border-radius: 50%;
+
+}
+
+.jump-circle.active {
+
+    background-color: red;
 }
